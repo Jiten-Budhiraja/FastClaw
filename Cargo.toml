@@ -1,0 +1,28 @@
+[package]
+name = "fastclaw"
+version = "0.1.0"
+edition = "2021"
+description = "Fast Linux VM manager for OpenClaw on macOS Apple Silicon"
+license = "MIT"
+
+[[bin]]
+name = "fastclaw"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive", "color"] }
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# vendored: compila OpenSSL da sorgente (arm64), evita dipendenza dalla versione di sistema
+openssl = { version = "0.10", features = ["vendored"] }
+ssh2 = "0.9"
+indicatif = "0.17"
+dirs = "5"
+which = "6"
+chrono = { version = "0.4", features = ["serde"] }
+home = "0.5.9"
+
+[profile.release]
+strip = true
+opt-level = 3
